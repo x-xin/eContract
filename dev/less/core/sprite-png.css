@@ -1,34 +1,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 86, 43);
-}
-.icon-arrow-bottom(@isHover: false){
-
-	.hover (@a) when (@a = false) {
-		.iconSprite();
-		.rem(width, 28);
-		.rem(height, 18);
-	}
-	.hover(@isHover);
-	
-	.rem(background-position, -30, 0);
-}
-
-[class^="icon-"],
-[class*=" icon-"]{
-	.iconSprite();
-}
-.icon-arrow-bottom{
-	.rem(background-position, -30, 0);
-	.rem(width, 28);
-	.rem(height, 18);
-}
-
-
-.iconSprite(){
-	background-image: url(../img/sprite.png);
-	.rem(background-size, 86, 43);
+	.rem(background-size, 48, 43);
 }
 .icon-arrow(@isHover: false){
 
@@ -39,7 +12,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -68, 0);
+	.rem(background-position, -30, 0);
 }
 
 [class^="icon-"],
@@ -47,7 +20,7 @@
 	.iconSprite();
 }
 .icon-arrow{
-	.rem(background-position, -68, 0);
+	.rem(background-position, -30, 0);
 	.rem(width, 18);
 	.rem(height, 28);
 }
@@ -55,7 +28,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 86, 43);
+	.rem(background-size, 48, 43);
 }
 .icon-point(@isHover: false){
 
