@@ -1,7 +1,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 28, 48);
+	.rem(background-size, 58, 48);
 }
 .icon-arrow(@isHover: false){
 
@@ -23,5 +23,32 @@
 	.rem(background-position, 0, 0);
 	.rem(width, 28);
 	.rem(height, 48);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 58, 48);
+}
+.icon-point(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 20);
+		.rem(height, 43);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -38, 0);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-point{
+	.rem(background-position, -38, 0);
+	.rem(width, 20);
+	.rem(height, 43);
 }
 

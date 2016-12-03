@@ -5,123 +5,28 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>鼓浪屿风景区</title>
-    <link rel="stylesheet" type="text/css" href="/smallsite/dest/css/styles.css?v=222" media="all"/>
+    <title>模块DEMO</title>
+    <link rel="stylesheet" type="text/css" href="/econtract/dest/css/styles.css?v=222" media="all"/>
     <script src="/smallsite/dest/js/all.js"></script>
-    <script src="/smallsite/dest/js/swiper.min.js"></script>
+
 </head>
 <body class="page-home">
-    <!-- page-home -->
-    <div class="header">
-        <h1><img src="/smallsite/dest/img/logo.jpg" width="100%" height="100%"></h1>
-        <a class="weather" href="#">
-            <img src="/smallsite/dest/img/weather/00.png" height="25" alt="">
-            <span>21℃~27℃&nbsp;&nbsp;</span>
-            <span>微风</span>
-        </a>
+    <div class="mod-header">
+        <span>电子合同详情</span>
+        <div class="sub-alert"><i class="icon-point"></i></div>
     </div>
-    <div class="notice">
-        <span> <i class="icon-notice"></i> 景区公告：</span>
-        <marquee direction="left" behavior="scroll" id="textMarquee" scrollamount="3">截止目前为止，景区在园人数为50000人。请自行疏散人员哦，安全为重。</marquee>
-    </div>
-    <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/smallsite/dest/img/slide1.jpg" width="100%" height="100%"></div>
-            <div class="swiper-slide"><img src="/smallsite/dest/img/slide2.jpg" width="100%" height="100%"></div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <ul class="menu">
-        <li>
-            <a href="#">
-                <i class="icon-sence"></i>
-                <span>景区介绍</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="icon-line"></i>
-                <span>线路攻略</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="icon-traffic"></i>
-                <span>交通住宿</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="icon-food"></i>
-                <span>美食特产</span>
-            </a>
-        </li>
-    </ul>
-    <div class="pic-menu">
-        <label class="pic-menu-left">
-            <a href="#">
-                <img src="/smallsite/dest/img/menu_01.png" width="100%" height="100%">
-                <span>语音导游</span>
-            </a>
-            <a href="#">
-                <img src="/smallsite/dest/img/menu_02.png" width="100%" height="100%">
-                <span>失物招领</span>
-            </a>
-        </label>
-        <label class="pic-menu-right">
-            <a href="#">
-                <img src="/smallsite/dest/img/menu_03.png" width="100%" height="100%">
-                <span>全景地图</span>
-            </a>
-            <a href="#">
-                <img src="/smallsite/dest/img/menu_04.png" width="100%" height="100%">
-                <span>景区相册</span>
-            </a>
-            <a href="#">
-                <img src="/smallsite/dest/img/menu_05.png" width="100%" height="100%">
-                <span>游客反馈</span>
-            </a>
-        </label>
-    </div>
-    <div class="hot"><em></em><span>热门推荐</span></div>
-    <ul class="hot-list">
-        <li>
-            <a href="/smallsite/doc/list.html">
-                <img src="/smallsite/dest/img/hot-list1.jpg" width="100%" height="auto">
-                <span>鼓浪屿环岛海滨浴场</span>
-            </a>
-        </li>
-        <li>
-            <a href="/smallsite/doc/list.html">
-                <img src="/smallsite/dest/img/hot-list1.jpg" width="100%" height="auto">
-                <span>菽庄花园菽庄花园菽庄花园菽庄花园菽庄花园菽庄花园菽庄花园菽庄花园</span>
-            </a>
-        </li>
-        <li>
-            <a href="/smallsite/doc/list.html">
-                <img src="/smallsite/dest/img/hot-list1.jpg" width="100%" height="auto">
-                <span>鼓浪屿环岛海滨浴场</span>
-            </a>
-        </li>
-        <li>
-            <a href="/smallsite/doc/list.html">
-                <img src="/smallsite/dest/img/hot-list1.jpg" width="100%" height="auto">
-                <span>钢琴博物馆钢琴博物馆钢</span>
-            </a>
-        </li>
-    </ul>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true
-        });
-        window.onload = function(){
-            var marqueeObj = document.getElementById('textMarquee');
-            marqueeObj.start();
-        }
-    </script>
+    <ul class="mod-menu">
+        <li><a href="#">使用说明</a></li><!--
+        --><li class="cur"><a href="#">合同正文</a></li><!--
+        --><li><a href="#">签字盖章</a></li><!--
+        --><li><a href="#">游客等级表</a></li><!--
+        --><li><a href="#">使用说明</a></li><!--
+        --><li><a href="#">使用说明</a></li><!--
+        --><li><a href="#">使用说明</a></li><!--
+        --><li><a href="#">使用说明</a></li><!--
+        --><li><a href="#">使用说明</a></li><!--
+        --><li><a href="#">使用说明</a></li>
+    </ul> 
+    <div class="mod-pagination">下一页</div>
 </body>
 </html>
