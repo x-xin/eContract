@@ -1,3 +1,46 @@
 .mod-list{
     // mod-list
+    .rem(margin-bottom,20);
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    label{
+        .rem(line-height,80);
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        justify-content:space-between;
+        .rem(padding,0,30);
+        span{
+            flex-shrink:0;
+            color: #333;
+            .rem(font-size,28);
+            &:first-child{
+                .rem(margin-right,40);
+            }
+            &:last-child{
+                color: #999;
+                text-align: right;
+            }
+            &.multi-line{
+                .rem(margin,18,0);
+                max-width: 60%;
+                .rem(line-height,44);
+            }
+        }
+
+        // line
+        &.line{
+            display: block;
+            span{
+                .rem(margin,18,0);
+                .rem(line-height,44);
+                display: block;
+                &:first-child{
+                    margin-right: 0;
+                }
+                &:last-child{
+                    text-align: left;
+                }
+            }
+        }
+    }
 }

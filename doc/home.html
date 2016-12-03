@@ -57,6 +57,40 @@
         </div>
     </div>
 
+    <div class="mod-list">
+        <label>
+            <span>证件号码</span>
+            <span>350521199002055030</span>
+        </label>
+        <label>
+            <span>住址</span>
+            <span class="multi-line">厦门市思明区环岛东路1699号建发国际大厦11楼</span>
+        </label>
+        <label>
+            <span>联系电话</span>
+            <span>15880910185</span>
+        </label>
+        <label>
+            <span>传真</span>
+            <span>0592-575880765</span>
+        </label>
+        <label>
+            <span>赴台游旅行社盖章</span>
+            <span class="multi-line">厦门欣欣国际旅行社厦门欣欣国际旅行社</span>
+        </label>
+        <label class="line">
+            <span>旅游者全部同行人名单及分房要求（所列同行人均视为旅游者要求必须同时安排出团）：</span>
+            <span>
+                <p>张凌菲与霍青霞同住；</p>
+                <p>徐天宏与周绮同住；</p>
+                <p>袁紫衣与程灵素同住；</p>
+                <p>张凌菲与霍青霞同住；</p>
+                <p>徐天宏与周绮同住；</p>
+                <p>袁紫衣与程灵素同住；</p>
+            </span>
+        </label>
+    </div>
+
 
 
     <div class="mod-pagination">下一页</div>
@@ -65,7 +99,6 @@
         $(function(){
             $('.j-chapter-title').click(function(){
                 if($(this).siblings().css('display') == "none"){
-
                     $(this).siblings().show();
                     $(this).find("i").removeClass('icon-arrow').addClass('icon-arrow-bottom');
                 }else{
