@@ -7,14 +7,17 @@
     <meta name="format-detection" content="telephone=no">
     <title>模块DEMO</title>
     <link rel="stylesheet" type="text/css" href="/econtract/dest/css/styles.css?v=222" media="all"/>
-    <script src="/smallsite/dest/js/all.js"></script>
+    <script src="/econtract/dest/js/all.js"></script>
+    <script src="/econtract/dest/js/jquery.min.js"></script>
 
 </head>
 <body class="page-home">
+
     <div class="mod-header">
         <span>电子合同详情</span>
         <div class="sub-alert"><i class="icon-point"></i></div>
     </div>
+
     <ul class="mod-menu">
         <li><a href="#">使用说明</a></li><!--
         --><li class="cur"><a href="#">合同正文</a></li><!--
@@ -27,6 +30,50 @@
         --><li><a href="#">使用说明</a></li><!--
         --><li><a href="#">使用说明</a></li>
     </ul> 
+    <div><br><br><br><br><br></div>
+
+    <div class="mod-chapter">
+        <div class="chapter-title j-chapter-title">
+            <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
+        </div>
+        <div class="chapter-con" style="display: none;">
+            内容部分自己添加
+        </div>
+    </div>
+    <div class="mod-chapter">
+        <div class="chapter-title j-chapter-title">
+            <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
+        </div>
+        <div class="chapter-con" style="display: none;">
+            内容部分自己添加
+        </div>
+    </div>
+    <div class="mod-chapter">
+        <div class="chapter-title j-chapter-title">
+            <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
+        </div>
+        <div class="chapter-con" style="display: none;">
+            内容部分自己添加
+        </div>
+    </div>
+
+
+
     <div class="mod-pagination">下一页</div>
+
+    <script>
+        $(function(){
+            $('.j-chapter-title').click(function(){
+                if($(this).siblings().css('display') == "none"){
+
+                    $(this).siblings().show();
+                    $(this).find("i").removeClass('icon-arrow').addClass('icon-arrow-bottom');
+                }else{
+                    $(this).siblings().hide();
+                    $(this).find("i").removeClass('icon-arrow-bottom').addClass('icon-arrow');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

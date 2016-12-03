@@ -1,37 +1,33 @@
 .mod-menu{
-    .rem(height,100); 
     background:#f2f7fa url(/eContract/dest/img/menu-bg.png) right center no-repeat;
     background-size: auto 100%;
     white-space: nowrap;
     overflow-x: auto;
     .fn-clear();
-    
     li{
         display: inline-block;
         .rem(height,100); 
+        border-bottom: 1px solid #dbdbdb;
         &.cur{
+            border-bottom: 1px solid #1f89ed;
             a{
                 color: #1f89ed;
-                border-bottom: 2px solid #1f89ed;
-                .rem(border-bottom-width,2);
             }
         }
         &:first-child{
-            .rem(padding-left,20)
+            .rem(padding-left,10)
         }
         &:last-child{
-            .rem(padding-right,20)
+            .rem(padding-right,10)
         }
         a{
             display: block;
             color: #999;
             .rem(padding,0,20);
             .rem(font-size,32);
-            .rem(height,98); 
-            .rem(line-height,98);
+            .rem(height,100); 
+            .rem(line-height,100);
             text-align: center;
-            border-bottom: 2px solid #dbdbdb;
-            .rem(border-bottom-width,2);
         }
     }
 }
