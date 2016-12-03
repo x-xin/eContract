@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>游客名单</title>
+    <link rel="stylesheet" type="text/css" href="/econtract/dest/css/styles.css?v=222" media="all"/>
+    <script src="/econtract/dest/js/all.js"></script>
+    <script src="/econtract/dest/js/jquery.min.js"></script>
+</head>
+<body class="page-namelist">
+
+    <div class="mod-header">
+        <span>电子合同详情</span>
+        <div class="sub-alert"><i class="icon-point"></i></div>
+    </div>
+
+    <ul class="mod-menu">
+        <li><a href="#">使用说明</a></li><!--
+        --><li><a href="#">合同正文</a></li><!--
+        --><li><a href="#">签字盖章</a></li><!--
+        --><li><a href="#">游客等级表</a></li><!--
+        --><li class="cur"><a href="#">游客名单</a></li><!--
+        --><li><a href="#">旅游行程单</a></li><!--
+        --><li><a href="#">自愿购物补充协议</a></li><!--
+        --><li><a href="#">自费项目补充协议</a></li>
+    </ul> 
+    <div class="mod-list">
+        <label>
+            <span>姓名</span>
+            <span>张欣欣</span>
+        </label>
+        <label>
+            <span>证件类型</span>
+            <span>身份证</span>
+        </label>
+        <label>
+            <span>证件号</span>
+            <span>350521199002055030</span>
+        </label>
+        <label>
+            <span>性别</span>
+            <span>男</span>
+        </label>
+        <label>
+            <span>联系电话</span>
+            <span>15880910182</span>
+        </label>
+        <label>
+            <span>出生日期</span>
+            <span>1990-02-05</span>
+        </label>
+        <label>
+            <span>国籍</span>
+            <span>中国</span>
+        </label>
+        <label>
+            <span>民族</span>
+            <span>汉族</span>
+        </label>
+    </div>
+    <div class="mod-list">
+        <label>
+            <span>姓名</span>
+            <span>张欣欣</span>
+        </label>
+        <label>
+            <span>证件类型</span>
+            <span>身份证</span>
+        </label>
+        <label>
+            <span>证件号</span>
+            <span>350521199002055030</span>
+        </label>
+        <label>
+            <span>性别</span>
+            <span>男</span>
+        </label>
+        <label>
+            <span>联系电话</span>
+            <span>15880910182</span>
+        </label>
+        <label>
+            <span>出生日期</span>
+            <span>1990-02-05</span>
+        </label>
+        <label>
+            <span>国籍</span>
+            <span>中国</span>
+        </label>
+        <label>
+            <span>民族</span>
+            <span>汉族</span>
+        </label>
+    </div>
+    <div class="mod-list">
+        <label>
+            <span>姓名</span>
+            <span>张欣欣</span>
+        </label>
+        <label>
+            <span>证件类型</span>
+            <span>身份证</span>
+        </label>
+        <label>
+            <span>证件号</span>
+            <span>350521199002055030</span>
+        </label>
+        <label>
+            <span>性别</span>
+            <span>男</span>
+        </label>
+        <label>
+            <span>联系电话</span>
+            <span>15880910182</span>
+        </label>
+        <label>
+            <span>出生日期</span>
+            <span>1990-02-05</span>
+        </label>
+        <label>
+            <span>国籍</span>
+            <span>中国</span>
+        </label>
+        <label>
+            <span>民族</span>
+            <span>汉族</span>
+        </label>
+    </div>
+
+    <div class="footer">技术支持：福建智慧旅游</div>
+
+    <div class="mod-pagination">下一页</div>
+
+    <script>
+        $(function(){
+            $('.j-chapter-title').click(function(){
+                if($(this).next(".chapter-con").css('display') == "none"){
+                    $(this).next(".chapter-con").show();
+                    $(this).find("i").removeClass('icon-arrow').addClass('icon-arrow-bottom');
+                }else{
+                    $(this).next(".chapter-con").hide();
+                    $(this).find("i").removeClass('icon-arrow-bottom').addClass('icon-arrow');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
