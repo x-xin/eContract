@@ -29,31 +29,25 @@
         --><li><a href="#">使用说明</a></li><!--
         --><li><a href="#">使用说明</a></li>
     </ul> 
-    <div><br><br><br><br><br></div>
+    <div class="mod-chapter j-chapter-title">
+        <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
+    </div>
+    <div class="chapter-con" style="display: none;">
+        内容部分自己添加
+    </div>
 
-    <div class="mod-chapter">
-        <div class="chapter-title j-chapter-title">
-            <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
-        </div>
-        <div class="chapter-con" style="display: none;">
-            内容部分自己添加
-        </div>
+    <div class="mod-chapter j-chapter-title">
+        <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
     </div>
-    <div class="mod-chapter">
-        <div class="chapter-title j-chapter-title">
-            <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
-        </div>
-        <div class="chapter-con" style="display: none;">
-            内容部分自己添加
-        </div>
+    <div class="chapter-con" style="display: none;">
+        内容部分自己添加
     </div>
-    <div class="mod-chapter">
-        <div class="chapter-title j-chapter-title">
-            <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
-        </div>
-        <div class="chapter-con" style="display: none;">
-            内容部分自己添加
-        </div>
+
+    <div class="mod-chapter j-chapter-title">
+        <span>第一章&emsp;合同的解除<i class="icon-arrow"></i></span>
+    </div>
+    <div class="chapter-con" style="display: none;">
+        内容部分自己添加
     </div>
 
     <div class="mod-list">
@@ -97,11 +91,11 @@
     <script>
         $(function(){
             $('.j-chapter-title').click(function(){
-                if($(this).siblings().css('display') == "none"){
-                    $(this).siblings().show();
+                if($(this).next(".chapter-con").css('display') == "none"){
+                    $(this).next(".chapter-con").show();
                     $(this).find("i").removeClass('icon-arrow').addClass('icon-arrow-bottom');
                 }else{
-                    $(this).siblings().hide();
+                    $(this).next(".chapter-con").hide();
                     $(this).find("i").removeClass('icon-arrow-bottom').addClass('icon-arrow');
                 }
             });

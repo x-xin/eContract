@@ -1,8 +1,15 @@
 .mod-menu{
+    width: 100%;
     background:#f2f7fa url(/eContract/dest/img/menu-bg.png) right center no-repeat;
     background-size: auto 100%;
     white-space: nowrap;
     overflow-x: auto;
+
+    position: fixed;
+    .rem(top,100);
+    left: 0;
+    z-index: 1;
+
     .fn-clear();
     li{
         display: inline-block;

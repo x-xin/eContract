@@ -1,23 +1,21 @@
 .mod-chapter{
-    .chapter-title{
-        .rem(height,88);
-        .rem(line-height,88);
-        .rem(padding,0,30);
-        .rem(margin-bottom,20);
-        .rem(font-size,30);
-        color:#0154b3;
-        background-color: #fff;
-        border-top:1px solid #e0e0e0;
-        border-bottom:1px solid #e0e0e0;
-        position: relative;
-        i[class*=icon]{
-            position: absolute;
-            top: 50%;
-            .rem(right,30);
-            .rem(margin-top,-14);
-        }
+    .rem(height,88);
+    .rem(line-height,88);
+    .rem(padding,0,30);
+    .rem(margin-bottom,20);
+    .rem(font-size,30);
+    color:#0154b3;
+    background-color: #fff;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    position: relative;
+    i[class*=icon]{
+        position: absolute;
+        top: 50%;
+        .rem(right,30);
+        .rem(margin-top,-14);
     }
-    .chapter-con{
-        .rem(padding,30);
-    }   
+}
+.mod-chapter+.chapter-con{
+    .rem(padding,30);
 }
