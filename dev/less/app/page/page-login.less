@@ -1,0 +1,49 @@
+.page-login{
+	.login{
+	.rem(padding,0,55);
+	.rem(margin-top,80);
+	.rem(min-height,900);
+	.login-input{
+		border:1px solid #dbdbdb;
+		.fn-clear();
+		&:first-child{
+			border-bottom: none;
+			.border-radius(5,top);
+		}
+		&:nth-child(2){
+			.border-radius(5,bottom);
+		}
+	}
+	span{
+		display: inline-block;
+		.rem(padding,0,30);
+		.rem(height,94);
+		.rem(line-height,94);
+		.rem(font-size,32);
+		color:#999999;
+		float: left;
+	}
+	input{
+		.rem(height,94);
+		.rem(line-height,94);
+		.rem(font-size,32);
+		width: 75%;
+		border:none;
+		float: left;
+	}
+}
+.ui-btn {
+	display: block;
+	color: #fff;
+	.rem(height,96);
+	.rem(line-height,96);
+	.rem(font-size,36);
+	text-align: center;
+	background-color: #1f89ed;
+	.rem(border-radius,5);
+	.rem(margin,80,0,0);
+}
+.ui-btn-disable{
+	background-color: #8fc4f6 !important;
+}
+}
