@@ -1,4 +1,3 @@
 # eContract
 
-> This is an e-contract
- read
+> This is an e-contract demo
