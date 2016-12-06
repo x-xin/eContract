@@ -1,9 +1,20 @@
-// 判断是否为IOS
-var isIOS       =    navigator.userAgent.match('iPad')|| navigator.userAgent.match('iPhone')|| navigator.userAgent.match('iPod') ,
-    displayMess =    function(){
+//  右上角公共弹窗
+$(function(){
+    var alertDiv = "<div class='sub-alert-modal'>"+
+                        "<div class='arrow-top'></div>"+
+                        "<div class='sub-alert-con'>"+
+                            "<a href='javascrpt'>下载PDF</a>"+
+                            "<a href='javascrpt'>退出</a>"+
+                        "</div>"+
+                    "</div>";
 
-        if(!isIOS && document.getElementById('isios')){
-            document.getElementById('isios').style.display = "block";
-        }
-        
-    };
+    $(".sub-alert").click(function(){
+        if($(this).hasClass("show")){
+            $(this).removeClass("show");
+            $('.sub-alert-modal').remove();
+        }else{
+            $('body').append(alertDiv);
+            $(this).addClass("show");
+        }        
+    });
+});

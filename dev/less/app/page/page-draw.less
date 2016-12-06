@@ -1,0 +1,71 @@
+.page-draw{
+    background-color: #fff;
+    margin-top:0;
+
+
+    .draw-container{
+        position: relative;
+        height: 100%;
+    }
+
+    .draw-title{
+        .rem(height,130);
+        width: 100%;
+        .rem(line-height,130);
+        text-align: center;
+        .rem(font-size,36);
+        color: #333;
+        font-weight: bold;
+        position: fixed;
+        top: 0;
+        left: 0;
+        i[class*=icon]{
+            vertical-align: middle;
+            .rem(margin,0,10);
+        }
+    }
+    .draw-signature{
+        width: 100%;
+        height: 55vh;
+        padding-top: 20%;
+        padding-bottom: 25%;
+        .js-signature{
+            .rem(margin,0,30);
+            height: 100%;
+        }
+    }
+
+    .draw-btn{
+        width: 100%;
+        .rem(height,135);
+        .rem(padding-top,35);
+        border-top:1px solid #e6e6e6; 
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        text-align: center;
+        button{
+            display: inline-block;
+            outline: none;
+            border:none;
+            width: 30%;
+            .rem(height,100);
+            .rem(line-height,100);
+            margin-left: 2.5%;
+            text-align: center;
+            background-color: #1f89ed;
+            color: #fff;
+            .rem(font-size,30);
+            .border-radius(5);
+
+            &:last-child{
+                margin-right: 2.5%;
+            }
+        }
+        button[disabled]{
+            background-color: #919191;
+        }
+    }
+}
