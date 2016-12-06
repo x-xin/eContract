@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>请签名</title>
+    <link rel="stylesheet" type="text/css" href="/econtract/dest/css/styles.css?v=222" media="all"/>
+    
+    <!-- JQ库要优先加载 -->
+    <script src="/econtract/dest/js/jquery.min.js"></script>
+    <!-- common -->
+    <script src="/econtract/dest/js/all.js"></script>
+    <script src="/econtract/dest/js/jq-signature.js"></script>
+    <script src="/econtract/dest/js/sweetalert-dev.js"></script>
+</head>
+<body class="page-draw">
+    <div class="draw-container">
+
+        <div class="draw-title"><i class="icon-sign"></i>请签名</div>
+
+        <div class="draw-signature">
+            <div class="js-signature"
+                data-width="100%"
+                data-height="300"
+                data-border="none"
+                data-background="#e9e9e9"
+                data-line-color="#000"
+                data-auto-fit="true">
+            </div>
+        </div>
+            
+        <div class="draw-btn">
+            <button>返回</button><!-- 
+            --><button id="clearBtn" onclick="clearCanvas();">重置</button><!-- 
+            --><button id="saveBtn" onclick="saveSignature();" disabled>提交</button>
+        </div>
+        <div id="signature" style="display: none;"></div>
+    </div>
+
+	<script>
+		// canvas function
+		function clearCanvas() {
+			$('.js-signature').jqSignature('clearCanvas');
+			$('#saveBtn').attr('disabled', true);
+		}
+		 
+		function saveSignature() {
+			$('#signature').empty();
+			var dataUrl = $('.js-signature').jqSignature('getDataURL');
+			var img = $('<img>').attr('src', dataUrl);
+			$('#signature').append(img);
+		}
+		 
+		$('.js-signature').on('jq.signature.changed', function() {
+			$('#saveBtn').attr('disabled', false);
+		}); 
+
+        $(document).on('ready', function() {
+
+            // canvas
+
+            $('.js-signature').jqSignature();
+
+            // alert start
+        
+            $("#saveBtn").click(function(){
+                swal({  
+                    title: "确定签订合同",
+                    text: "<input class='alert-input' type='text' placeholder='请输入验证码' /><div class='alert-btn'>获取验证码</div>",
+                    // 获取验证码后的div 变为 内容变为秒数 颜色alert-btn alert-btn-second
+                    html: true,
+                    confirmButtonText: '确认',
+                    confirmButtonColor: '#fff',
+                    cancelButtonText: '取消',
+                    showCancelButton: true,
+                    closeOnConfirm: false 
+                },function(isConfirm){
+                    if(isConfirm){
+                        swal({
+                            title: "合同签订成功！",
+                            text: "",
+                            timer: 2000,
+                            showConfirmButton: false
+                        },function(){
+                            swal({  
+                                title: "填写接收PDF电子合同邮箱",
+                                text: "<input class='alert-input' type='text' placeholder='请输入接收电子邮箱' />",
+                                html: true,
+                                confirmButtonText: '确认',
+                                confirmButtonColor: '#fff',
+                                cancelButtonText: '取消',
+                                showCancelButton: true,
+                                closeOnConfirm: false
+                            },function(isConfirm){
+                                if(isConfirm){
+                                    swal({
+                                        title: "发送成功，请注意查收！",
+                                        text: "",
+                                        timer: 2000,
+                                        showConfirmButton: false
+                                    });
+                                }
+                            });
+                        });
+                    }
+                });
+
+            });
+
+        });
+
+	</script>
+</body>
+</html>
