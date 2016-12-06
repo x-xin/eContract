@@ -23,8 +23,8 @@
         lineWidth: 1,
         border: '1px dashed #AAAAAA',
         background: '#FFFFFF',
-        width: 300,
-        height: 100,
+        width: '100%',
+        height: '100%',
         autoFit: false
       },
       canvasFixture = '<canvas></canvas>';
@@ -72,11 +72,11 @@
         this._resizeCanvas();
         // TO-DO - allow for dynamic canvas resizing 
         // (need to save canvas state before changing width to avoid getting cleared)
-        // var timeout = false;
-        // $(window).on('resize', $.proxy(function(e) {
-        //   clearTimeout(timeout);
-        //   timeout = setTimeout($.proxy(this._resizeCanvas, this), 250);
-        // }, this));
+        var timeout = false;
+        $(window).on('resize', $.proxy(function(e) {
+          clearTimeout(timeout);
+          timeout = setTimeout($.proxy(this._resizeCanvas, this), 250);
+        }, this));
       }
       this.canvas = this.$canvas[0];
       this._resetCanvas();
@@ -154,8 +154,12 @@
     // Resize the canvas element
     _resizeCanvas: function() {
       var width = this.$element.outerWidth();
+      var height = this.$element.height();
+      console.log(this.$element);
       this.$canvas.attr('width', width);
+      this.$canvas.attr('height', height);
       this.$canvas.css('width', width + 'px');
+      this.$canvas.css('height', height + 'px');
     }
   };
 
