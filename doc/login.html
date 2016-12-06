@@ -7,7 +7,11 @@
     <meta name="format-detection" content="telephone=no">
     <title>登录</title>
     <link rel="stylesheet" type="text/css" href="/eContract/dest/css/styles.css?v=222" media="all"/>
-    <script src="/eContract/dest/js/all.js"></script>
+    <!-- JQ库要优先加载 -->
+    <script src="/econtract/dest/js/jquery.min.js"></script>
+    <!-- common -->
+    <script src="/econtract/dest/js/all.js"></script>
+    <script src="/econtract/dest/js/sweetalert-dev.js"></script>
 </head>
 <body class="page-login">
      <div class="mod-header">
@@ -28,5 +32,16 @@
     </div>
     <div class="footer">技术支持：福建智慧旅游</div>
 </body>
+
+<script>
+    $(function(){
+        swal({
+            title: "手机号与验证码不匹配",
+            text: "",
+            timer: 2000,
+            showConfirmButton: false
+        });
+    });
+</script>
 
 </html>

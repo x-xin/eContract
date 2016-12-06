@@ -42,11 +42,11 @@ body.stop-scrolling {
     text-align: center;
     text-transform: none;
     position: relative;
-    margin: 0.525rem 0 0;
+    margin:0;
     padding: 0.75rem 0.75rem 1.275rem;
     line-height: 1rem;
     display: block; 
-    font-weight: bold;
+    font-weight: normal;
     border-bottom: 1px solid #e9e9e9;}
   .sweet-alert p {
     color: #333;
@@ -56,12 +56,37 @@ body.stop-scrolling {
     text-align: inherit;
     float: none;
     margin: 0;
-    padding: 0 .75rem .75rem;
-    line-height: normal;
+    padding: 0;
+    line-height: 2.2rem;
     border-bottom: 1px solid #e9e9e9;
     margin-top: -.75rem;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #e9e9e9;
     background-color: #fff;}
+
+  .sweet-alert p .alert-input{
+    display: block;
+    width: 60%;
+    margin: 0;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+  }
+  .sweet-alert p .alert-btn{
+    display: block;
+    width: 30%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: #1f89ed;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .sweet-alert p .alert-btn-second{
+    color: #dddddd;
+  }
+
   .sweet-alert p:empty {
     display: none;
   }
@@ -141,18 +166,20 @@ body.stop-scrolling {
     margin-top: 10px;
     margin-bottom: 17px;
     font-size: 18px;
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
+    // box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
     padding: 0 12px;
     display: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .sweet-alert input:focus {
       outline: none;
-      box-shadow: 0px 0px 3px #c4e6f5;
-      border: 1px solid #b4dbed; }
+      // box-shadow: 0px 0px 3px #c4e6f5;
+      // border: 1px solid #b4dbed;
+       }
       .sweet-alert input:focus::-moz-placeholder {
         transition: opacity 0.3s 0.03s ease;
-        opacity: 0.5; }
+        opacity: 0.5; 
+      }
       .sweet-alert input:focus:-ms-input-placeholder {
         transition: opacity 0.3s 0.03s ease;
         opacity: 0.5; }
@@ -186,7 +213,6 @@ body.stop-scrolling {
     font-size: 0.75rem;
     font-weight: 500;
     padding: 16px 40px;
-    margin: 0 5px;
     cursor: pointer; outline: none;}
     // .sweet-alert button:focus {
     //   outline: none;
@@ -196,7 +222,7 @@ body.stop-scrolling {
     // .sweet-alert button:active {
     //   background-color: #5dc2f1; }
     .sweet-alert button.cancel {
-      border-left: 1px solid #e9e9e9; }
+      border-right: 1px solid #e9e9e9; }
     //   .sweet-alert button.cancel:hover {
     //     background-color: #b9b9b9; }
     //   .sweet-alert button.cancel:active {
@@ -371,6 +397,32 @@ body.stop-scrolling {
       border: none;
       background-position: center center;
       background-repeat: no-repeat; }
+
+/* 灰度弹窗开始 */
+.sweet-alert[data-timer*='0']{
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.sweet-alert[data-timer*='0'] h2{
+  color: #fff;
+  border-bottom: none;
+  padding: 1.45rem .5rem !important;
+}
+.sweet-alert[data-timer*='0'] p{
+  display: none !important;
+  margin: 0 !important;
+  padding:0 !important;
+  border: none !important;
+}
+.sweet-alert[data-timer*='0'] .sa-button-container{
+  display: none !important;
+}
+
+/* 灰度弹窗结束 */
+
+
 
 /*
  * Animations
